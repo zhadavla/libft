@@ -6,12 +6,18 @@
 /*   By: vzhadan <vzhadan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/27 20:24:53 by vzhadan           #+#    #+#             */
-/*   Updated: 2023/01/28 13:12:24 by vzhadan          ###   ########.fr       */
+/*   Updated: 2023/01/28 14:33:31 by vzhadan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*
+ *	Allocates with malloc() and returns a new node.
+ *	The member variable {content} is initialized with
+ *	the value of the parameter {content}. The variable
+ *	{next} is initialized to NULL.
+*/
 t_list	*ft_lstnew(void *content)
 {
 	t_list	*new_node;

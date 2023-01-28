@@ -6,7 +6,7 @@
 /*   By: vzhadan <vzhadan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 19:59:05 by vzhadan           #+#    #+#             */
-/*   Updated: 2023/01/27 16:21:09 by vzhadan          ###   ########.fr       */
+/*   Updated: 2023/01/28 14:53:54 by vzhadan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,12 @@ char	*cut_end(char *trimmed_from_beginning, char const *set)
 	return (str);
 }
 
+
+/*
+ *	Allocates with malloc() and returns a copy of
+ *	{s1} with the characters specified in {set} removed
+ *	from the beginning and the end of the string
+*/
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	if (!s1)

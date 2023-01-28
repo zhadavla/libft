@@ -6,14 +6,14 @@
 /*   By: vzhadan <vzhadan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 16:21:05 by vzhadan           #+#    #+#             */
-/*   Updated: 2023/01/17 19:33:52 by vzhadan          ###   ########.fr       */
+/*   Updated: 2023/01/28 13:38:12 by vzhadan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-	Function that checks for an ascii character
+ *	Function that checks whether {c} is ascii character
 */
 int	ft_isascii(int c)
 {

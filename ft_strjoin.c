@@ -6,12 +6,17 @@
 /*   By: vzhadan <vzhadan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 19:30:15 by vzhadan           #+#    #+#             */
-/*   Updated: 2023/01/27 16:18:31 by vzhadan          ###   ########.fr       */
+/*   Updated: 2023/01/28 14:35:18 by vzhadan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*
+ *	Allocates with malloc() and returns a new
+ *	string, which is the result of the concatenation
+ *	of {s1} and {s2}
+*/
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	size_t	len1;

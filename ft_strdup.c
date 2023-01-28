@@ -6,12 +6,17 @@
 /*   By: vzhadan <vzhadan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 18:15:52 by vzhadan           #+#    #+#             */
-/*   Updated: 2023/01/18 19:38:43 by vzhadan          ###   ########.fr       */
+/*   Updated: 2023/01/28 14:31:11 by vzhadan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*
+	This function returns a pointer to a null-terminated byte string,
+	which is a duplicate of the string pointed to by {s}. 
+	The memory obtained is done dynamically using malloc and hence it can be freed using free(). 
+*/
 char	*ft_strdup(const char *s)
 {
 	char	*new_str;

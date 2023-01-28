@@ -6,12 +6,16 @@
 /*   By: vzhadan <vzhadan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/27 19:18:12 by vzhadan           #+#    #+#             */
-/*   Updated: 2023/01/27 19:46:38 by vzhadan          ###   ########.fr       */
+/*   Updated: 2023/01/28 14:13:21 by vzhadan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*
+ *	Outputs the string {s} to the given file descriptor {fd}
+ *	followed by a newline.
+*/
 void	ft_putendl_fd(char *s, int fd)
 {
 	if (!s)

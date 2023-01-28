@@ -6,12 +6,15 @@
 /*   By: vzhadan <vzhadan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/27 20:40:20 by vzhadan           #+#    #+#             */
-/*   Updated: 2023/01/28 13:12:54 by vzhadan          ###   ########.fr       */
+/*   Updated: 2023/01/28 13:57:19 by vzhadan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*
+ *	Counts the number of nodes in a list.
+*/ 
 int	ft_lstsize(t_list *lst)
 {
 	int	size;

@@ -6,12 +6,15 @@
 /*   By: vzhadan <vzhadan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/27 19:20:32 by vzhadan           #+#    #+#             */
-/*   Updated: 2023/01/28 13:09:20 by vzhadan          ###   ########.fr       */
+/*   Updated: 2023/01/28 14:12:59 by vzhadan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*
+ *	Outputs the integer {n} to the given file descriptor {fd}.
+*/
 void	ft_putnbr_fd(int n, int fd)
 {
 	if (n == -2147483648)
