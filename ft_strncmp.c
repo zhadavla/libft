@@ -6,16 +6,18 @@
 /*   By: vzhadan <vzhadan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 20:05:40 by vzhadan           #+#    #+#             */
-/*   Updated: 2023/01/28 14:49:05 by vzhadan          ###   ########.fr       */
+/*   Updated: 2023/01/28 15:08:44 by vzhadan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
- *	Compares up to num characters of the C string {s1} to those of the C string {s2}.
- *	This function starts comparing the first character of each string. If they are equal to each other, 
- *	it continues with the following pairs until the characters differ, until a terminating null-character is reached, 
+ *	Compares up to num characters of the string {s1} to those of the string {s2}.
+ *	This function starts comparing the first character of each string. 
+ *	If they are equal to each other, 
+ *	it continues with the following pairs until the characters differ,
+ *	until a terminating null-character is reached, 
  *	or until num characters match in both strings, whichever happens first.
  *  If strings are equal returns 0.
 */

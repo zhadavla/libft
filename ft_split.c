@@ -6,7 +6,7 @@
 /*   By: vzhadan <vzhadan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/27 16:22:14 by vzhadan           #+#    #+#             */
-/*   Updated: 2023/01/28 14:29:06 by vzhadan          ###   ########.fr       */
+/*   Updated: 2023/01/28 15:06:24 by vzhadan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,8 @@ size_t	find_len_of_word(char const *s_moved, char c)
 }
 
 /*
- *	Allocates memory for word (substring getted form {s_moved} as string before first occurence of {c} in {s_moved}) 
+ *	Allocates memory for word (substring getted form {s_moved} 
+ *	as string before first occurence of {c} in {s_moved}) 
  *	and adds word to {str_indx} array, increments {indx}. 
 */
 void	add_word(char **str_indx, char const *s_moved, char c, size_t *indx)
@@ -60,6 +61,7 @@ void	add_word(char **str_indx, char const *s_moved, char c, size_t *indx)
 	ft_strlcpy(*str_indx, s_moved, len_of_word + 1);
 	*indx = *indx + 1;
 }
+
 /*
  *	Allocates with malloc() and returns an array
  *	of strings obtained by splitting {s} using the
