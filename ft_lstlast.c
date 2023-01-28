@@ -1,18 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vzhadan <vzhadan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/17 19:25:16 by vzhadan           #+#    #+#             */
-/*   Updated: 2023/01/28 13:25:16 by vzhadan          ###   ########.fr       */
+/*   Created: 2023/01/27 20:44:25 by vzhadan           #+#    #+#             */
+/*   Updated: 2023/01/28 13:12:04 by vzhadan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_toupper(int c)
+#include "libft.h"
+
+/*
+	Returns the last node of the list.
+*/
+t_list	*ft_lstlast(t_list *lst)
 {
-	if (c >= 'a' && c <= 'z')
-		c += 'A' - 'a';
-	return (c);
+	if (!lst)
+		return (NULL);
+	while (lst->next)
+		lst = lst -> next;
+	return (lst);
 }

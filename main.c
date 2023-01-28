@@ -2,26 +2,69 @@
 #include "stdio.h"
 // #include "ft_strtrim.c"
 // #include "ft_split.c"
-#include "ft_itoa.c"
+// #include "ft_itoa.c"
 // size_t	get_size(char const *s, char c);
 // void test_split(void);
-void test_itoa(void);
+// void test_itoa(void);
+void	test_lstclear(void);
+// #include "ft_lstclear.c"
+#include <string.h>	
+
+t_list			*lstnew(void *d) {
+	t_list *ret = malloc(sizeof(t_list));
+
+	if (!ret)
+		return (NULL);
+	ret->next = NULL;
+	ret->content = d;
+	return (ret);
+}
 
 int main(void)
 {
-	test_itoa();
+	test_lstclear();
 	return (0);
 }
 
-
-void test_itoa(void)
+void ft_lstclear(t_list **lst, void (*del)(void*))
 {
-	char str[] = "abcg";
-	printf("%zu\n", get_num_of_digits(54));
-	ft_itoa(45);
-	ft_itoa(-45);
-	ft_itoa(0);
+	t_list	*current;
+	t_list	*next;
+
+	current = *lst;
+	while (current)
+	{
+		next = current->next;
+		printf("%s\n", current->content);
+		ft_lstdelone(current, del);
+		// printf("%s\n", current->content);
+		current = next;
+	}
+	*lst = NULL;
 }
+
+void	lstdelone_f(void *str)
+{
+	free(str);
+}
+
+void	test_lstclear(void)
+{
+	t_list	*l = lstnew(strdup("nyancat"));
+
+	l->next = lstnew(strdup("#TEST#"));
+	ft_lstclear(&l, &lstdelone_f);
+
+}
+
+// void test_itoa(void)
+// {
+// 	char str[] = "abcg";
+// 	printf("%zu\n", get_num_of_digits(54));
+// 	ft_itoa(45);
+// 	ft_itoa(-45);
+// 	ft_itoa(0);
+// }
 // void test_split(void)
 // {
 // 	// const char *str =  "  split  me   please   ";

@@ -1,18 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vzhadan <vzhadan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/17 19:25:16 by vzhadan           #+#    #+#             */
-/*   Updated: 2023/01/28 13:25:16 by vzhadan          ###   ########.fr       */
+/*   Created: 2023/01/28 12:48:23 by vzhadan           #+#    #+#             */
+/*   Updated: 2023/01/28 13:11:58 by vzhadan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_toupper(int c)
+#include "libft.h"
+
+/*
+	Iterates the list ’lst’ and applies the function
+	’f’ on the content of each node.
+*/
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	if (c >= 'a' && c <= 'z')
-		c += 'A' - 'a';
-	return (c);
+	while (lst)
+	{
+		f(lst->content);
+		lst = lst->next;
+	}
 }

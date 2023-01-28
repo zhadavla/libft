@@ -1,18 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vzhadan <vzhadan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/17 19:25:16 by vzhadan           #+#    #+#             */
-/*   Updated: 2023/01/28 13:25:16 by vzhadan          ###   ########.fr       */
+/*   Created: 2023/01/27 20:40:20 by vzhadan           #+#    #+#             */
+/*   Updated: 2023/01/28 13:12:54 by vzhadan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_toupper(int c)
+#include "libft.h"
+
+int	ft_lstsize(t_list *lst)
 {
-	if (c >= 'a' && c <= 'z')
-		c += 'A' - 'a';
-	return (c);
+	int	size;
+
+	size = 0;
+	while (lst)
+	{
+		lst = lst->next;
+		size ++;
+	}
+	return (size);
 }
