@@ -6,7 +6,7 @@
 /*   By: vzhadan <vzhadan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 19:59:05 by vzhadan           #+#    #+#             */
-/*   Updated: 2023/01/28 15:03:07 by vzhadan          ###   ########.fr       */
+/*   Updated: 2023/01/31 16:57:49 by vzhadan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 		return ("");
 	while (ft_strchr(set, s1[end]) && end >= 0)
 		end--;
-	str = (char *)malloc(sizeof(char) * (end - start + 1) + 1);
+	str = (char *)malloc(sizeof(char) * ((end - start + 1) + 1));
 	if (!str)
 		return (NULL);
 	ft_strlcpy(str, s1 + start, end - start + 2);

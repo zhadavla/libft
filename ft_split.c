@@ -6,7 +6,7 @@
 /*   By: vzhadan <vzhadan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/27 16:22:14 by vzhadan           #+#    #+#             */
-/*   Updated: 2023/01/28 15:06:24 by vzhadan          ###   ########.fr       */
+/*   Updated: 2023/01/31 16:57:10 by vzhadan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ void	add_word(char **str_indx, char const *s_moved, char c, size_t *indx)
 	size_t	len_of_word;
 
 	len_of_word = find_len_of_word(s_moved, c);
-	*str_indx = (char *)malloc(sizeof(char) * len_of_word + 1);
+	*str_indx = (char *)malloc(sizeof(char) * (len_of_word + 1));
 	if (!str_indx)
 	{
 		*str_indx = NULL;
@@ -78,7 +78,7 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	is_start = 1;
 	indx = 0;
-	str = (char **)malloc(sizeof(char *) * get_size(s, c));
+	str = (char **)malloc(sizeof(char *) * (get_size(s, c) + 1));
 	if (!str)
 		return (NULL);
 	while (*s)

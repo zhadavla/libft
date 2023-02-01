@@ -1,3 +1,15 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: vzhadan <vzhadan@student.42.fr>            +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2023/01/28 15:13:02 by vzhadan           #+#    #+#              #
+#    Updated: 2023/01/31 17:11:29 by vzhadan          ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 NAME = libft.a
 
 MY_SOURCES = ft_isalnum.c \
@@ -33,8 +45,9 @@ MY_SOURCES = ft_isalnum.c \
 	ft_putchar_fd.c \
 	ft_putstr_fd.c \
 	ft_putendl_fd.c \
-	ft_putnbr_fd.c \
-	ft_lstnew.c \
+	ft_putnbr_fd.c 
+	
+BONUS =	ft_lstnew.c \
 	ft_lstadd_front.c \
 	ft_lstsize.c \
 	ft_lstlast.c \
@@ -44,11 +57,13 @@ MY_SOURCES = ft_isalnum.c \
 	ft_lstiter.c \
 	ft_lstmap.c
 
+BONUS_OBJS = $(BONUS:.c=.o)
 	     
 
 MY_HEADER = libft.h
 
 MY_OBJECTS = $(MY_SOURCES:.c=.o)
+
 
 CFLAGS = -Wall -Wextra -Werror
 
@@ -58,14 +73,13 @@ CFLAGS = -Wall -Wextra -Werror
 $(NAME): $(MY_OBJECTS)
 	ar rcs $(NAME) $(MY_OBJECTS)
 
-so:
-	cc -nostartfiles -fPIC $(CFLAGS) $(MY_SOURCES)
-	gcc -nostartfiles -shared -o libft.so $(MY_OBJECTS)
-
 all: $(NAME)
 
+
+bonus:	$(OBJS) $(BONUS_OBJS)
+	ar rcs $(NAME) $(OBJS) $(BONUS_OBJS)
 clean:
-	rm -f $(MY_OBJECTS)
+	rm -f $(MY_OBJECTS) $(BONUS_OBJS)
 
 fclean: clean
 	rm -f $(NAME)
