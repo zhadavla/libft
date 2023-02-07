@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*   get_next_line_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vzhadan <vzhadan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/07 13:52:26 by vzhadan           #+#    #+#             */
-/*   Updated: 2023/02/07 14:00:46 by vzhadan          ###   ########.fr       */
+/*   Updated: 2023/02/07 14:03:37 by vzhadan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -114,15 +114,15 @@ char	*cut_line(char *lefted_input)
 */
 char	*get_next_line(int fd)
 {
-	static char	*lefted_input;
+	static char	*lefted_input[2028];
 	char		*line;
 
 	if (fd < 0 || BUFFER_SIZE < 1)
 		return (NULL);
-	lefted_input = get_input(fd, lefted_input);
-	if (!lefted_input)
+	lefted_input[fd] = get_input(fd, lefted_input[fd]);
+	if (!lefted_input[fd])
 		return (NULL);
-	line = cut_line(lefted_input);
-	lefted_input = clean_lefted_input(lefted_input);
+	line = cut_line(lefted_input[fd]);
+	lefted_input[fd] = clean_lefted_input(lefted_input[fd]);
 	return (line);
 }
