@@ -12,11 +12,11 @@
 
 NAME = libftprintf.a
 
-MY_SOURCES = libft/ft_isdigit.c \
-	libft/ft_strlen.c \
-	libft/ft_strlcpy.c \
-	libft/ft_strchr.c \
-	libft/ft_strncmp.c \
+MY_SOURCES = needed_libft/ft_isdigit.c \
+	needed_libft/ft_strlen.c \
+	needed_libft/ft_strlcpy.c \
+	needed_libft/ft_strchr.c \
+	needed_libft/ft_strncmp.c \
 	bonuses/ft_c_s_p.c \
 	bonuses/ft_d_i_u.c \
 	bonuses/ft_hex.c \
@@ -47,9 +47,9 @@ bonus: $(MY_OBJECTS)
 all: $(NAME)
 
 clean:
-	rm -f $(MY_OBJECTS)
+	rm -rf $(MY_OBJECTS)
 
 fclean: clean
-	rm -f $(NAME)
+	rm -rf $(NAME)
 
 .PHONY: clean fclean re
