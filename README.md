@@ -1,3 +1,3 @@
 # libft
 My implementation of 42 school's libft library. 
-In that project I've implemented the most useful standard C language functions (mainly for work with C-strings).
+In that project I've implemented the most useful standard C language functions (mainly for work with C-strings). Also added function to read one line from file and printf. 
