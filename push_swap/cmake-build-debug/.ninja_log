@@ -1,0 +1,7 @@
+# ninja log v5
+28	51	1687792426785511732	push_swap	fe996ebdfce6d686
+0	27	1687794535720998853	build.ninja	1b7e13819bf6192e
+0	27	1687792426761511703	CMakeFiles/push_swap.dir/main.c.o	bde0d3ef892d4374
+1	16	1687794537749061520	CMakeFiles/push_swap.dir/src/stack/stack_utils.c.o	132b985452fcb9ad
+1	33	1687794537765062014	CMakeFiles/push_swap.dir/main.c.o	14816442597ca0d3
+33	57	1687794537789062755	push_swap	ba40a6de010edab0
