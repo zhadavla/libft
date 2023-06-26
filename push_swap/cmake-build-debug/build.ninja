@@ -109,17 +109,23 @@ build CMakeFiles/push_swap.dir/src/stack/one_stack_operations.c.o: C_COMPILER__p
   OBJECT_DIR = CMakeFiles/push_swap.dir
   OBJECT_FILE_DIR = CMakeFiles/push_swap.dir/src/stack
 
-build CMakeFiles/push_swap.dir/src/stack/stack_operation_b.c.o: C_COMPILER__push_swap_Debug /home/vlad/42/push_swap/src/stack/stack_operation_b.c || cmake_object_order_depends_target_push_swap
-  DEP_FILE = CMakeFiles/push_swap.dir/src/stack/stack_operation_b.c.o.d
-  FLAGS = -g -fdiagnostics-color=always -std=gnu11
-  OBJECT_DIR = CMakeFiles/push_swap.dir
-  OBJECT_FILE_DIR = CMakeFiles/push_swap.dir/src/stack
-
 build CMakeFiles/push_swap.dir/src/stack/two_stacks_operations.c.o: C_COMPILER__push_swap_Debug /home/vlad/42/push_swap/src/stack/two_stacks_operations.c || cmake_object_order_depends_target_push_swap
   DEP_FILE = CMakeFiles/push_swap.dir/src/stack/two_stacks_operations.c.o.d
   FLAGS = -g -fdiagnostics-color=always -std=gnu11
   OBJECT_DIR = CMakeFiles/push_swap.dir
   OBJECT_FILE_DIR = CMakeFiles/push_swap.dir/src/stack
+
+build CMakeFiles/push_swap.dir/src/logic/sort_three_elements_stack.c.o: C_COMPILER__push_swap_Debug /home/vlad/42/push_swap/src/logic/sort_three_elements_stack.c || cmake_object_order_depends_target_push_swap
+  DEP_FILE = CMakeFiles/push_swap.dir/src/logic/sort_three_elements_stack.c.o.d
+  FLAGS = -g -fdiagnostics-color=always -std=gnu11
+  OBJECT_DIR = CMakeFiles/push_swap.dir
+  OBJECT_FILE_DIR = CMakeFiles/push_swap.dir/src/logic
+
+build CMakeFiles/push_swap.dir/src/logic/logic_utils.c.o: C_COMPILER__push_swap_Debug /home/vlad/42/push_swap/src/logic/logic_utils.c || cmake_object_order_depends_target_push_swap
+  DEP_FILE = CMakeFiles/push_swap.dir/src/logic/logic_utils.c.o.d
+  FLAGS = -g -fdiagnostics-color=always -std=gnu11
+  OBJECT_DIR = CMakeFiles/push_swap.dir
+  OBJECT_FILE_DIR = CMakeFiles/push_swap.dir/src/logic
 
 
 # =============================================================================
@@ -129,7 +135,7 @@ build CMakeFiles/push_swap.dir/src/stack/two_stacks_operations.c.o: C_COMPILER__
 #############################################
 # Link the executable push_swap
 
-build push_swap: C_EXECUTABLE_LINKER__push_swap_Debug CMakeFiles/push_swap.dir/src/stack/stack_utils.c.o CMakeFiles/push_swap.dir/src/push_swap.c.o CMakeFiles/push_swap.dir/src/libft/chars_to_ints.c.o CMakeFiles/push_swap.dir/src/libft/ft_atoi.c.o CMakeFiles/push_swap.dir/src/stack/print_stack.c.o CMakeFiles/push_swap.dir/src/stack/array_to_stack.c.o CMakeFiles/push_swap.dir/src/libft/ft_itoa.c.o CMakeFiles/push_swap.dir/src/libft/ft_strdup.c.o CMakeFiles/push_swap.dir/src/libft/ft_strlen.c.o CMakeFiles/push_swap.dir/src/stack/one_stack_operations.c.o CMakeFiles/push_swap.dir/src/stack/stack_operation_b.c.o CMakeFiles/push_swap.dir/src/stack/two_stacks_operations.c.o
+build push_swap: C_EXECUTABLE_LINKER__push_swap_Debug CMakeFiles/push_swap.dir/src/stack/stack_utils.c.o CMakeFiles/push_swap.dir/src/push_swap.c.o CMakeFiles/push_swap.dir/src/libft/chars_to_ints.c.o CMakeFiles/push_swap.dir/src/libft/ft_atoi.c.o CMakeFiles/push_swap.dir/src/stack/print_stack.c.o CMakeFiles/push_swap.dir/src/stack/array_to_stack.c.o CMakeFiles/push_swap.dir/src/libft/ft_itoa.c.o CMakeFiles/push_swap.dir/src/libft/ft_strdup.c.o CMakeFiles/push_swap.dir/src/libft/ft_strlen.c.o CMakeFiles/push_swap.dir/src/stack/one_stack_operations.c.o CMakeFiles/push_swap.dir/src/stack/two_stacks_operations.c.o CMakeFiles/push_swap.dir/src/logic/sort_three_elements_stack.c.o CMakeFiles/push_swap.dir/src/logic/logic_utils.c.o
   FLAGS = -g
   LINK_FLAGS = -rdynamic
   OBJECT_DIR = CMakeFiles/push_swap.dir
