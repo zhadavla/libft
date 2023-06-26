@@ -1,7 +1,19 @@
 # ninja log v5
-28	51	1687792426785511732	push_swap	fe996ebdfce6d686
-0	27	1687794535720998853	build.ninja	1b7e13819bf6192e
-0	27	1687792426761511703	CMakeFiles/push_swap.dir/main.c.o	bde0d3ef892d4374
-1	16	1687794537749061520	CMakeFiles/push_swap.dir/src/stack/stack_utils.c.o	132b985452fcb9ad
+35	76	1687798199646451659	push_swap	dacd6f02b82b78f1
+1	43	1687798035959455016	CMakeFiles/push_swap.dir/src/libft/chars_to_ints.c.o	6ccb0f3949b0000c
+2	25	1687797958018025598	CMakeFiles/push_swap.dir/src/libft/ft_atoi.c.o	2ca6473ff130d88
+0	28	1687798541972702504	build.ninja	bff427c5478feb0c
+2	33	1687797958026025744	CMakeFiles/push_swap.dir/src/stack/array_to_stack.c.o	a910ad918cdaa09a
+0	29	1687798035947454796	CMakeFiles/push_swap.dir/src/push_swap.c.o	840d6412a944aea7
+0	33	1687797958030025818	CMakeFiles/push_swap.dir/src/stack/stack_utils.c.o	132b985452fcb9ad
+1	35	1687798199602450855	CMakeFiles/push_swap.dir/src/stack/print_stack.c.o	b404399a4c310ef1
 1	33	1687794537765062014	CMakeFiles/push_swap.dir/main.c.o	14816442597ca0d3
-33	57	1687794537789062755	push_swap	ba40a6de010edab0
+2	25	1687798796337338472	CMakeFiles/push_swap.dir/src/libft/ft_strdup.c.o	cf727612acbba1ba
+1	25	1687798796337338472	CMakeFiles/push_swap.dir/src/push_swap.c.o	840d6412a944aea7
+1	25	1687798796337338472	CMakeFiles/push_swap.dir/src/libft/chars_to_ints.c.o	6ccb0f3949b0000c
+2	25	1687798796337338472	CMakeFiles/push_swap.dir/src/stack/print_stack.c.o	b404399a4c310ef1
+3	26	1687798796341338545	CMakeFiles/push_swap.dir/src/libft/ft_strlen.c.o	c0bb843727b928ac
+2	36	1687798796353338764	CMakeFiles/push_swap.dir/src/libft/ft_itoa.c.o	710d1b6c1a07a9e2
+36	68	1687798796385339346	push_swap	15850794bde1bbfe
+1	26	1687798818401740382	CMakeFiles/push_swap.dir/src/stack/print_stack.c.o	b404399a4c310ef1
+26	46	1687798818425740819	push_swap	15850794bde1bbfe

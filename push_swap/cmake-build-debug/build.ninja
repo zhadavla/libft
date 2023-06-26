@@ -49,17 +49,59 @@ cmake_ninja_workdir = /home/vlad/42/push_swap/cmake-build-debug/
 
 build cmake_object_order_depends_target_push_swap: phony || CMakeFiles/push_swap.dir
 
-build CMakeFiles/push_swap.dir/main.c.o: C_COMPILER__push_swap_Debug /home/vlad/42/push_swap/main.c || cmake_object_order_depends_target_push_swap
-  DEP_FILE = CMakeFiles/push_swap.dir/main.c.o.d
-  FLAGS = -g -fdiagnostics-color=always -std=gnu11
-  OBJECT_DIR = CMakeFiles/push_swap.dir
-  OBJECT_FILE_DIR = CMakeFiles/push_swap.dir
-
 build CMakeFiles/push_swap.dir/src/stack/stack_utils.c.o: C_COMPILER__push_swap_Debug /home/vlad/42/push_swap/src/stack/stack_utils.c || cmake_object_order_depends_target_push_swap
   DEP_FILE = CMakeFiles/push_swap.dir/src/stack/stack_utils.c.o.d
   FLAGS = -g -fdiagnostics-color=always -std=gnu11
   OBJECT_DIR = CMakeFiles/push_swap.dir
   OBJECT_FILE_DIR = CMakeFiles/push_swap.dir/src/stack
+
+build CMakeFiles/push_swap.dir/src/push_swap.c.o: C_COMPILER__push_swap_Debug /home/vlad/42/push_swap/src/push_swap.c || cmake_object_order_depends_target_push_swap
+  DEP_FILE = CMakeFiles/push_swap.dir/src/push_swap.c.o.d
+  FLAGS = -g -fdiagnostics-color=always -std=gnu11
+  OBJECT_DIR = CMakeFiles/push_swap.dir
+  OBJECT_FILE_DIR = CMakeFiles/push_swap.dir/src
+
+build CMakeFiles/push_swap.dir/src/libft/chars_to_ints.c.o: C_COMPILER__push_swap_Debug /home/vlad/42/push_swap/src/libft/chars_to_ints.c || cmake_object_order_depends_target_push_swap
+  DEP_FILE = CMakeFiles/push_swap.dir/src/libft/chars_to_ints.c.o.d
+  FLAGS = -g -fdiagnostics-color=always -std=gnu11
+  OBJECT_DIR = CMakeFiles/push_swap.dir
+  OBJECT_FILE_DIR = CMakeFiles/push_swap.dir/src/libft
+
+build CMakeFiles/push_swap.dir/src/libft/ft_atoi.c.o: C_COMPILER__push_swap_Debug /home/vlad/42/push_swap/src/libft/ft_atoi.c || cmake_object_order_depends_target_push_swap
+  DEP_FILE = CMakeFiles/push_swap.dir/src/libft/ft_atoi.c.o.d
+  FLAGS = -g -fdiagnostics-color=always -std=gnu11
+  OBJECT_DIR = CMakeFiles/push_swap.dir
+  OBJECT_FILE_DIR = CMakeFiles/push_swap.dir/src/libft
+
+build CMakeFiles/push_swap.dir/src/stack/print_stack.c.o: C_COMPILER__push_swap_Debug /home/vlad/42/push_swap/src/stack/print_stack.c || cmake_object_order_depends_target_push_swap
+  DEP_FILE = CMakeFiles/push_swap.dir/src/stack/print_stack.c.o.d
+  FLAGS = -g -fdiagnostics-color=always -std=gnu11
+  OBJECT_DIR = CMakeFiles/push_swap.dir
+  OBJECT_FILE_DIR = CMakeFiles/push_swap.dir/src/stack
+
+build CMakeFiles/push_swap.dir/src/stack/array_to_stack.c.o: C_COMPILER__push_swap_Debug /home/vlad/42/push_swap/src/stack/array_to_stack.c || cmake_object_order_depends_target_push_swap
+  DEP_FILE = CMakeFiles/push_swap.dir/src/stack/array_to_stack.c.o.d
+  FLAGS = -g -fdiagnostics-color=always -std=gnu11
+  OBJECT_DIR = CMakeFiles/push_swap.dir
+  OBJECT_FILE_DIR = CMakeFiles/push_swap.dir/src/stack
+
+build CMakeFiles/push_swap.dir/src/libft/ft_itoa.c.o: C_COMPILER__push_swap_Debug /home/vlad/42/push_swap/src/libft/ft_itoa.c || cmake_object_order_depends_target_push_swap
+  DEP_FILE = CMakeFiles/push_swap.dir/src/libft/ft_itoa.c.o.d
+  FLAGS = -g -fdiagnostics-color=always -std=gnu11
+  OBJECT_DIR = CMakeFiles/push_swap.dir
+  OBJECT_FILE_DIR = CMakeFiles/push_swap.dir/src/libft
+
+build CMakeFiles/push_swap.dir/src/libft/ft_strdup.c.o: C_COMPILER__push_swap_Debug /home/vlad/42/push_swap/src/libft/ft_strdup.c || cmake_object_order_depends_target_push_swap
+  DEP_FILE = CMakeFiles/push_swap.dir/src/libft/ft_strdup.c.o.d
+  FLAGS = -g -fdiagnostics-color=always -std=gnu11
+  OBJECT_DIR = CMakeFiles/push_swap.dir
+  OBJECT_FILE_DIR = CMakeFiles/push_swap.dir/src/libft
+
+build CMakeFiles/push_swap.dir/src/libft/ft_strlen.c.o: C_COMPILER__push_swap_Debug /home/vlad/42/push_swap/src/libft/ft_strlen.c || cmake_object_order_depends_target_push_swap
+  DEP_FILE = CMakeFiles/push_swap.dir/src/libft/ft_strlen.c.o.d
+  FLAGS = -g -fdiagnostics-color=always -std=gnu11
+  OBJECT_DIR = CMakeFiles/push_swap.dir
+  OBJECT_FILE_DIR = CMakeFiles/push_swap.dir/src/libft
 
 
 # =============================================================================
@@ -69,7 +111,7 @@ build CMakeFiles/push_swap.dir/src/stack/stack_utils.c.o: C_COMPILER__push_swap_
 #############################################
 # Link the executable push_swap
 
-build push_swap: C_EXECUTABLE_LINKER__push_swap_Debug CMakeFiles/push_swap.dir/main.c.o CMakeFiles/push_swap.dir/src/stack/stack_utils.c.o
+build push_swap: C_EXECUTABLE_LINKER__push_swap_Debug CMakeFiles/push_swap.dir/src/stack/stack_utils.c.o CMakeFiles/push_swap.dir/src/push_swap.c.o CMakeFiles/push_swap.dir/src/libft/chars_to_ints.c.o CMakeFiles/push_swap.dir/src/libft/ft_atoi.c.o CMakeFiles/push_swap.dir/src/stack/print_stack.c.o CMakeFiles/push_swap.dir/src/stack/array_to_stack.c.o CMakeFiles/push_swap.dir/src/libft/ft_itoa.c.o CMakeFiles/push_swap.dir/src/libft/ft_strdup.c.o CMakeFiles/push_swap.dir/src/libft/ft_strlen.c.o
   FLAGS = -g
   LINK_FLAGS = -rdynamic
   OBJECT_DIR = CMakeFiles/push_swap.dir
