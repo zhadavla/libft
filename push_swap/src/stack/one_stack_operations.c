@@ -18,15 +18,31 @@ void stack_swap(t_stack **stack) {
         write(1, "sb\n", 3);
 }
 
+void stack_push_b(t_stack **stack_a, t_stack **stack_b) {
+    t_stack *to_push;
+
+    if (!*stack_a)
+        return;
+
+    to_push = *stack_a;
+    to_push->is_a = false;
+    *stack_a = (*stack_a)->next;
+
+    ft_lstadd_front(stack_b, to_push);
+
+    write(1, "pb\n", 3);
+}
+
 /*pa (push a): Take the first element at the top of b and put it at the top of a.
 Do nothing if b is empty.*/
-void stack_push(t_stack **stack_a, t_stack **stack_b) {
+void stack_push_a(t_stack **stack_a, t_stack **stack_b) {
     t_stack *tmp;
 
     if (!*stack_b)
         return;
 
     tmp = *stack_b;
+    tmp->is_a = true;
     *stack_b = (*stack_b)->next;
 
     if (!*stack_a)
@@ -34,10 +50,8 @@ void stack_push(t_stack **stack_a, t_stack **stack_b) {
     else
         ft_lstadd_front(stack_a, tmp);
 
-    if ((*stack_a)->is_a)
-        write(1, "pa\n", 3);
-    else
-        write(1, "pb\n", 3);
+
+    write(1, "pa\n", 3);
 }
 
 /*ra (rotate a): Shift up all elements of stack a by 1.

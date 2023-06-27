@@ -10,4 +10,5 @@ add_executable(push_swap src/stack/stack.h
         src/stack/print_stack.c src/stack/array_to_stack.c src/libft/ft_itoa.c
         src/libft/ft_strdup.c src/libft/ft_strlen.c
         src/stack/one_stack_operations.c
-        src/stack/two_stacks_operations.c src/logic/sort_three_elements_stack.c src/logic/logic_utils.c src/logic/logic.h)
+        src/stack/two_stacks_operations.c src/logic/sort_three_elements_stack.c src/logic/logic_utils.c
+        src/logic/logic.h src/logic/calculate_moves.c src/stack/move_to_b.c )

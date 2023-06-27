@@ -1,14 +1,24 @@
+#include <stdio.h>
+#include <string.h>
 #include "push_swap.h"
-#include "stack/stack.h"
 #include "libft/libft.h"
+
+
+void print_array(int *ar){
+    for (int i = 0; i < 5; ++i) {
+        printf("%d ", ar[i]);
+    }
+    printf("\n");
+}
 
 int main(int argc, char **argv) {
     int *ar1 = chars_to_ints(argv, argc);
-    int ar2[] = {5, 4, 3, 2, 1};
 
+    t_stack *a = array_to_stack_backward(ar1, argc - 1, true);
+    t_stack *b = NULL;
 
-    t_stack *a = array_to_stack(ar1, 5);
-    t_stack *b = array_to_stack(ar2, 5);
+    execute_command(a, b);
     print_stacks(a, b);
+
     return 0;
 }

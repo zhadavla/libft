@@ -1,7 +1,5 @@
 #include "logic.h"
 
-/* function to check if the stack is sorted,
-if it is sorted then it returns 0, else 1*/
 int is_not_sorted(t_stack *stack) {
     while (stack != NULL) {
         if (stack->data > stack->next->data)
@@ -11,7 +9,7 @@ int is_not_sorted(t_stack *stack) {
     return (false);
 }
 
-/* function that sorts when there are only three elements left in stack A */
+// sort three elements stack
 void sort_three(t_stack **stack_a) {
     if (is_not_sorted(*stack_a)) {
         if ((*stack_a)->data == find_min_value(*stack_a)) {

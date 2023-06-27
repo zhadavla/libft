@@ -24,3 +24,27 @@ int find_max_value(t_stack *stack) {
     return max_value;
 }
 
+t_stack *find_by_value(t_stack *stack, int value) {
+    while (stack) {
+        if (value == stack->data)
+            return stack;
+        stack = stack->next;
+    }
+    return NULL;
+}
+
+t_stack *find_max_node(t_stack *stack) {
+    int max_value;
+    t_stack *max_node;
+
+    max_value = find_max_value(stack);
+    max_node = find_by_value(stack, max_value);
+    return max_node;
+}
+
+t_stack *get_last_element(t_stack *stack){
+    while (stack){
+        stack = stack->next;
+    }
+    return stack;
+}
