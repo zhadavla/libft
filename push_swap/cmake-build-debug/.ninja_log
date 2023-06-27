@@ -59,3 +59,17 @@
 71	102	1687876170739022851	push_swap	f1377f5fd681b6cb
 1	56	1687876188771095987	CMakeFiles/push_swap.dir/src/stack/print_stack.c.o	b404399a4c310ef1
 56	85	1687876188799096101	push_swap	f1377f5fd681b6cb
+2	29	1687881751496238463	CMakeFiles/push_swap.dir/src/stack/array_to_stack.c.o	a910ad918cdaa09a
+1	30	1687881751500236779	CMakeFiles/push_swap.dir/src/stack/stack_utils.c.o	132b985452fcb9ad
+3	30	1687881751500236779	CMakeFiles/push_swap.dir/src/stack/two_stacks_operations.c.o	d3a0e76e8499bbd8
+3	30	1687881751500236779	CMakeFiles/push_swap.dir/src/logic/logic_utils.c.o	3e58dfa39e3de68e
+2	32	1687881751504235095	CMakeFiles/push_swap.dir/src/libft/chars_to_ints.c.o	6ccb0f3949b0000c
+2	32	1687881751504235095	CMakeFiles/push_swap.dir/src/push_swap.c.o	840d6412a944aea7
+4	33	1687881751504235095	CMakeFiles/push_swap.dir/src/logic/sort_three_elements_stack.c.o	6f1f993769324a1e
+3	41	1687881751512231728	CMakeFiles/push_swap.dir/src/stack/one_stack_operations.c.o	2f182687459c7241
+29	47	1687881751516230044	CMakeFiles/push_swap.dir/src/stack/move_to_b.c.o	1629b42c7797a029
+2	57	1687881751528224993	CMakeFiles/push_swap.dir/src/stack/print_stack.c.o	b404399a4c310ef1
+1	25	1687881942667737729	CMakeFiles/push_swap.dir/src/stack/two_stacks_operations.c.o	d3a0e76e8499bbd8
+0	49	1687881942695725943	CMakeFiles/push_swap.dir/src/stack/print_stack.c.o	b404399a4c310ef1
+1	47	1687881955914159768	CMakeFiles/push_swap.dir/src/logic/calculate_moves.c.o	494d5671e12ff45c
+47	88	1687881955958141248	push_swap	f1377f5fd681b6cb

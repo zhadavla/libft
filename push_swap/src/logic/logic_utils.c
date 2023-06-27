@@ -42,9 +42,18 @@ t_stack *find_max_node(t_stack *stack) {
     return max_node;
 }
 
-t_stack *get_last_element(t_stack *stack){
-    while (stack){
+t_stack *get_last_element(t_stack *stack) {
+    while (stack->next)
         stack = stack->next;
-    }
     return stack;
+}
+
+int find_mid_value(t_stack *stack) {
+    int mid_value;
+
+    if (ft_lstsize(stack) % 2 == 0)
+        mid_value = ft_lstsize(stack) / 2;
+    else
+        mid_value = ft_lstsize(stack) / 2 + 1;
+    return mid_value;
 }

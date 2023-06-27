@@ -1,8 +1,6 @@
 #include "stack.h"
 
-/*sa (swap a): Swap the first 2 elements at the top of the a stack.
-Do nothing if there is only one or no elements.*/
-void stack_swap(t_stack **stack) {
+void stack_swap(t_stack **stack, int needs_to_print) {
     t_stack *tmp;
 
     if (*stack == NULL || (*stack)->next == NULL)
@@ -12,10 +10,12 @@ void stack_swap(t_stack **stack) {
     tmp->next = (*stack)->next;
     (*stack)->next = tmp;
 
-    if ((*stack)->is_a)
-        write(1, "sa\n", 3);
-    else
-        write(1, "sb\n", 3);
+    if (needs_to_print){
+        if ((*stack)->is_a)
+            write(1, "sa\n", 3);
+        else
+            write(1, "sb\n", 3);
+    }
 }
 
 void stack_push_b(t_stack **stack_a, t_stack **stack_b) {
@@ -56,7 +56,7 @@ void stack_push_a(t_stack **stack_a, t_stack **stack_b) {
 
 /*ra (rotate a): Shift up all elements of stack a by 1.
 The first element becomes the last one.*/
-void stack_rotate(t_stack **stack) {
+void stack_rotate(t_stack **stack, int needs_to_print) {
     t_stack *tmp;
 
     if (*stack == NULL || (*stack)->next == NULL)
@@ -65,15 +65,17 @@ void stack_rotate(t_stack **stack) {
     *stack = (*stack)->next;
     ft_lstadd_back(stack, tmp);
 
-    if ((*stack)->is_a)
-        write(1, "ra\n", 3);
-    else
-        write(1, "rb\n", 3);
+    if (needs_to_print){
+        if ((*stack)->is_a)
+            write(1, "ra\n", 3);
+        else
+            write(1, "rb\n", 3);
+    }
 }
 
 /*rra (reverse rotate a): Shift down all elements of stack a by 1.
 The last element becomes the first one*/
-void stack_reverse_rotate(t_stack **stack) {
+void stack_reverse_rotate(t_stack **stack, int needs_to_print) {
     t_stack *tmp;
     t_stack *last;
 
@@ -85,9 +87,11 @@ void stack_reverse_rotate(t_stack **stack) {
     last->next = *stack;
     *stack = last;
 
-    if ((*stack)->is_a)
-        write(1, "rra\n", 4);
-    else
-        write(1, "rrb\n", 4);
+    if (needs_to_print){
+        if ((*stack)->is_a)
+            write(1, "rra\n", 4);
+        else
+            write(1, "rrb\n", 4);
+    }
 }
 

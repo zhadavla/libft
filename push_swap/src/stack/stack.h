@@ -15,6 +15,8 @@ typedef struct s_stack {
 // utils
 int ft_lstsize(t_stack *lst);
 
+int find_mid_value(t_stack *stack);
+
 void print_stacks(t_stack *a, t_stack *b);
 
 t_stack *array_to_stack(const int *array, int length, int is_a);
@@ -32,13 +34,13 @@ void stack_push_b(t_stack **stack_a, t_stack **stack_b);
 
 void stack_push_a(t_stack **stack_a, t_stack **stack_b);
 
-void stack_reverse_rotate(t_stack **stack);
+void stack_reverse_rotate(t_stack **stack, int needs_to_print);
 
-void stack_rotate(t_stack **stack);
+void stack_rotate(t_stack **stack, int needs_to_print);
 
 void stack_push(t_stack **stack_a, t_stack **stack_b);
 
-void stack_swap(t_stack **stack);
+void stack_swap(t_stack **stack, int needs_to_print);
 
 void ss(t_stack **stack_a, t_stack **stack_b);
 

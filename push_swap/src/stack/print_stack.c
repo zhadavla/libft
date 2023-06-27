@@ -31,20 +31,20 @@ void execute_command(t_stack *stack_a, t_stack *stack_b) {
 
         if (!strcmp(str, "sa")) {
             system("clear");
-            stack_swap(&stack_a);
+            stack_swap(&stack_a, true);
             print_stacks(stack_a, stack_b);
         }
 
         if (!strcmp(str, "sb")) {
             system("clear");
-            stack_swap(&stack_b);
+            stack_swap(&stack_b, true);
             print_stacks(stack_a, stack_b);
         }
 
         if (!strcmp(str, "ss")) {
             system("clear");
-            stack_swap(&stack_a);
-            stack_swap(&stack_b);
+            stack_swap(&stack_a, true);
+            stack_swap(&stack_b, true);
             print_stacks(stack_a, stack_b);
         }
 
@@ -63,25 +63,25 @@ void execute_command(t_stack *stack_a, t_stack *stack_b) {
 
         if (!strcmp(str, "ra")) {
             system("clear");
-            stack_rotate(&stack_a);
+            stack_rotate(&stack_a, true);
             print_stacks(stack_a, stack_b);
         }
 
         if (!strcmp(str, "rb")) {
             system("clear");
-            stack_rotate(&stack_b);
+            stack_rotate(&stack_b, true);
             print_stacks(stack_a, stack_b);
         }
 
         if (!strcmp(str, "rrb")) {
             system("clear");
-            stack_reverse_rotate(&stack_b);
+            stack_reverse_rotate(&stack_b, true);
             print_stacks(stack_a, stack_b);
         }
 
         if (!strcmp(str, "rra")) {
             system("clear");
-            stack_reverse_rotate(&stack_a);
+            stack_reverse_rotate(&stack_a, true);
             print_stacks(stack_a, stack_b);
         }
 
