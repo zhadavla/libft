@@ -1,44 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_adds.c                                          :+:      :+:    :+:   */
+/*   ft_init.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vzhadan <vzhadan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/09 20:18:04 by vzhadan           #+#    #+#             */
-/*   Updated: 2023/03/11 16:23:35 by vzhadan         ###   ########.fr       */
+/*   Updated: 2023/08/05 16:04:33 by vzhadan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../ft_printf.h"
+#include "ft_printf.h"
 
-size_t	ft_find_nod(unsigned int num, int system)
+void	ft_init_flags(t_flags *flags)
 {
-	size_t	num_of_digits;
-
-	num_of_digits = 0;
-	if (num == 0)
-		return (1);
-	while (num > 0)
-	{
-		num_of_digits++;
-		num /= system;
-	}
-	return (num_of_digits + 1);
+	flags->is_negative = 0;
+	flags->is_dash = 0;
+	flags->is_zero = 0;
+	flags->is_dot = 0;
+	flags->is_hash = 0;
+	flags->is_space = 0;
+	flags->is_plus = 0;
+	flags->width = 0;
+	flags->pr_width = 0;
 }
 
-size_t	ft_find_nod_l(unsigned long long num, int system)
+void	ft_init_specifiers(t_specifiers *sp)
 {
-	size_t	num_of_digits;
+	sp->c = 0;
+	sp->s = 0;
+	sp->d = 0;
+	sp->i = 0;
+	sp->u = 0;
+	sp->x = 0;
+	sp->xcap = 0;
+	sp->p = 0;
+	sp->percent = 0;
+}
 
-	(void)system;
-	num_of_digits = 0;
-	if (num == 0)
-		return (1);
-	while (num > 0)
-	{
-		num_of_digits++;
-		num /= system;
-	}
-	return (num_of_digits + 1);
+void	ft_init(t_flags *f, t_specifiers *sp)
+{
+	ft_init_flags(f);
+	ft_init_specifiers(sp);
 }

@@ -6,7 +6,7 @@
 /*   By: vzhadan <vzhadan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 16:20:44 by vzhadan           #+#    #+#             */
-/*   Updated: 2023/01/31 16:05:40 by vzhadan          ###   ########.fr       */
+/*   Updated: 2023/08/05 16:04:58 by vzhadan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define LIBFT_H
 # include <stdlib.h>
 # include <unistd.h>
+
 
 typedef struct s_list
 {

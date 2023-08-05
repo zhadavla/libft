@@ -6,11 +6,11 @@
 /*   By: vzhadan <vzhadan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/09 20:18:04 by vzhadan           #+#    #+#             */
-/*   Updated: 2023/03/11 16:23:15 by vzhadan          ###   ########.fr       */
+/*   Updated: 2023/08/05 16:04:33 by vzhadan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../ft_printf.h"
+#include "ft_printf.h"
 
 int	ft_putsigns_hex(t_flags *flags, t_specifiers *sp)
 {
