@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_bonus.h                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mnurlybe <mnurlybe@student.42.fr>          +#+  +:+       +#+        */
+/*   By: vzhadan <vzhadan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/31 17:17:16 by mnurlybe          #+#    #+#             */
-/*   Updated: 2023/01/31 17:18:04 by mnurlybe         ###   ########.fr       */
+/*   Updated: 2023/08/11 15:51:45 by vzhadan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ char	*clean_tmp(char *tmp);
 void	ft_bzero(void *s, size_t n);
 void	*ft_calloc(size_t nmemb, size_t size);
 size_t	ft_strlen(const char *s);
-int		ft_strchr(char *s, char c);
+int		is_strchr(char *s, char c);
 char	*ft_strjoin(char *tmp, char *buf);
 
 #endif

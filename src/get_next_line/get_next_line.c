@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mnurlybe <mnurlybe@student.42.fr>          +#+  +:+       +#+        */
+/*   By: vzhadan <vzhadan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/31 15:04:28 by mnurlybe          #+#    #+#             */
-/*   Updated: 2023/02/02 13:15:54 by mnurlybe         ###   ########.fr       */
+/*   Updated: 2023/08/11 15:51:48 by vzhadan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,7 +80,7 @@ char	*get_tmp(int fd, char *tmp)
 	buf = malloc(sizeof(char) * (BUFFER_SIZE + 1));
 	if (!buf)
 		return (NULL);
-	while (!ft_strchr(tmp, '\n') && read_bytes > 0)
+	while (!is_strchr(tmp, '\n') && read_bytes > 0)
 	{
 		read_bytes = (int)read(fd, buf, BUFFER_SIZE);
 		if (read_bytes == 0)
