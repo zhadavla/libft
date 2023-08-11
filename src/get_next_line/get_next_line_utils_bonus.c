@@ -1,98 +1,89 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line_utils.c                              :+:      :+:    :+:   */
+/*   get_next_line_utils_bonus.c                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vzhadan <vzhadan@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mnurlybe <mnurlybe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/28 16:55:47 by vzhadan           #+#    #+#             */
-/*   Updated: 2023/02/07 14:11:45 by vzhadan          ###   ########.fr       */
+/*   Created: 2023/01/31 17:16:10 by mnurlybe          #+#    #+#             */
+/*   Updated: 2023/01/31 17:22:55 by mnurlybe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
-/*
- *	Allocates with malloc() and returns a new
- *	string, which is the result of the concatenation
- *	of {s1} and {s2}. !More efficient implementation!
-*/
-char	*ft_strjoin(char *str1, char *str2)
-{
-	char	*copy;
-	size_t	i;
-	size_t	j;
-	size_t	len1;
-	size_t	len2;
-
-	len1 = ft_strlen(str1);
-	len2 = ft_strlen(str2);
-	copy = (char *)malloc(sizeof(char) * (len1 + len2 + 1));
-	i = 0;
-	while (str1[i])
-	{
-		copy[i] = str1[i];
-		i ++;
-	}
-	j = 0;
-	while (str2[j])
-		copy[i++] = str2[j++];
-	copy[i] = '\0';
-	free(str1);
-	return (copy);
-}
-
-/*
- *	Makes {n} values of pointer {s} equal to zero
-*/
 void	ft_bzero(void *s, size_t n)
 {
-	unsigned char	*p;
+	unsigned char	*s_ptr;
+	size_t			i;
 
-	p = (unsigned char *)s;
-	while (n--)
-		*(p++) = 0;
+	i = 0;
+	s_ptr = (unsigned char *)s;
+	while (i < n)
+	{
+		s_ptr[i] = 0;
+		i++;
+	}
 }
 
-/*
- *	Allocates the requested memory and returns a pointer to it.
- *	Sets allocated memory to zero.
-*/
 void	*ft_calloc(size_t nmemb, size_t size)
 {
-	char	*p;
+	void	*mem_ptr;
 
-	p = NULL;
-	p = (char *)malloc(nmemb * size);
-	if (!p)
-		return (NULL);
-	ft_bzero(p, size * nmemb);
-	return (p);
+	mem_ptr = malloc(nmemb * size);
+	if (!mem_ptr)
+		return (0);
+	ft_bzero(mem_ptr, nmemb * size);
+	return (mem_ptr);
 }
 
-/*
- *	Finds len of string pointed by {s}
-*/
 size_t	ft_strlen(const char *s)
 {
-	unsigned int	len;
+	size_t	count;
 
-	len = 0;
-	while (*(s + len))
-		len++;
-	return (len);
+	count = 0;
+	while (s[count] != '\0')
+		count++;
+	return (count);
 }
 
-/*
- * 	Searches for the first occurrence of the character {c} (an unsigned char) 
- *	in the string pointed to by the argument {s}.
-*/
-char	*ft_strchr(const char *s, int c)
+int	ft_strchr(char *s, char c)
 {
-	if (*s == (char )c)
-		return ((char *)s);
-	while (*(s++))
-		if (*(char *)s == (char )c)
-			return ((char *)s);
-	return (NULL);
+	int	i;
+
+	i = 0;
+	while (s[i])
+	{
+		if (s[i] == c)
+			return (1);
+		i++;
+	}
+	return (0);
+}
+
+char	*ft_strjoin(char *tmp, char *buf)
+{
+	char	*join;
+	int		i;
+	int		j;
+
+	join = malloc(sizeof(char) * (ft_strlen(tmp) + ft_strlen(buf)) + 1);
+	if (!join || !buf || !tmp)
+		return (0);
+	i = 0;
+	while (tmp[i] != 0)
+	{
+		join[i] = tmp[i];
+		i++;
+	}
+	j = 0;
+	while (buf[j] != 0)
+	{
+		join[i] = buf[j];
+		i++;
+		j++;
+	}
+	join[ft_strlen(tmp) + ft_strlen(buf)] = '\0';
+	free(tmp);
+	return (join);
 }

@@ -3,126 +3,111 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vzhadan <vzhadan@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mnurlybe <mnurlybe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/07 13:52:26 by vzhadan           #+#    #+#             */
-/*   Updated: 2023/02/07 14:03:37 by vzhadan          ###   ########.fr       */
+/*   Created: 2023/01/31 17:14:59 by mnurlybe          #+#    #+#             */
+/*   Updated: 2023/02/02 13:22:17 by mnurlybe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
-/*
- *	Reads from file {fd} until '\n' character shows up
-*/
-char	*get_input(int fd, char *lefted_input)
+char	*clean_tmp(char *tmp)
 {
-	char	*buffer;
-	int		bytes_read;
-
-	if (!lefted_input)
-		lefted_input = ft_calloc(1, sizeof(*lefted_input));
-	buffer = malloc(sizeof(*lefted_input) * (BUFFER_SIZE + 1));
-	if (!buffer)
-		return (NULL);
-	bytes_read = 1;
-	while (!ft_strchr(lefted_input, '\n'))
-	{
-		bytes_read = read(fd, buffer, BUFFER_SIZE);
-		if (bytes_read == 0)
-			break ;
-		if (bytes_read == -1)
-		{
-			free(lefted_input);
-			free(buffer);
-			return (NULL);
-		}
-		buffer[bytes_read] = '\0';
-		lefted_input = ft_strjoin(lefted_input, buffer);
-	}
-	free(buffer);
-	return (lefted_input);
-}
-
-/*
- *	Removes line from {lefted_input}
- *	if only that line was in the {lefted_input}
- *	free {lefted_input}
-*/
-char	*clean_lefted_input(char *lefted_input)
-{
-	char	*new_lefted_input;
-	size_t	len;
-	size_t	i;
-	size_t	j;
+	char	*new_tmp;
+	int		i;
+	int		j;
 
 	i = 0;
-	while (lefted_input[i] && lefted_input[i] != '\n')
+	while (tmp[i] != '\0' && tmp[i] != '\n')
 		i++;
-	if (lefted_input[i] == '\0')
+	if (tmp[i] == 0)
 	{
-		free(lefted_input);
-		return (NULL);
+		free(tmp);
+		return (0);
 	}
-	i++;
-	len = ft_strlen(lefted_input);
-	new_lefted_input = (char *)ft_calloc((len - i + 1), sizeof(*lefted_input));
-	if (!new_lefted_input)
-		return (NULL);
+	new_tmp = ft_calloc((ft_strlen(tmp) - i + 1), sizeof(char));
+	if (!new_tmp)
+		return (0);
 	j = 0;
-	while (lefted_input[i] != '\0')
-		new_lefted_input[j++] = lefted_input[i++];
-	free (lefted_input);
-	return (new_lefted_input);
+	i++;
+	while (tmp[i] != '\0')
+	{
+		new_tmp[j] = tmp[i];
+		j++;
+		i++;
+	}
+	free (tmp);
+	return (new_tmp);
 }
 
-/*
- *	Cuts the line. 
- *	Reads through the line until '\n' or '\0' chararcters shows up.
-*/
-char	*cut_line(char *lefted_input)
+char	*get_line(char *tmp)
 {
 	char	*line;
-	size_t	i;
-	size_t	j;
+	int		i;
+	int		j;
 
-	if (!(*lefted_input))
+	if (!tmp[0])
 		return (NULL);
 	j = 0;
-	while (lefted_input[j] && lefted_input[j] != '\n')
+	while (tmp[j] != '\0' && tmp[j] != '\n')
 		j++;
-	line = (char *)ft_calloc(j + 2, sizeof(*line));
+	j++;
+	line = ft_calloc(j + 1, sizeof(char));
 	if (!line)
 		return (NULL);
 	i = 0;
-	while (lefted_input[i] && lefted_input[i] != '\n')
+	while (tmp[i] != '\0' && tmp[i] != '\n')
 	{
-		line[i] = lefted_input[i];
+		line[i] = tmp[i];
 		i++;
 	}
-	if (lefted_input[i] == '\0')
+	if (tmp[i] == '\0')
 		line[i] = '\0';
 	else
 		line[i] = '\n';
 	return (line);
 }
 
-/*
- *	Function that reads one line from file.
- *	{lefted_input} is static string that exists 
- *	all lifetime of the program
-*/
+char	*get_tmp(int fd, char *tmp)
+{
+	char	*buf;
+	int		read_bytes;
+
+	if (!tmp)
+		tmp = ft_calloc(1, sizeof(char));
+	read_bytes = 1;
+	buf = malloc(sizeof(char) * (BUFFER_SIZE + 1));
+	if (!buf)
+		return (NULL);
+	while (!ft_strchr(tmp, '\n') && read_bytes > 0)
+	{
+		read_bytes = (int)read(fd, buf, BUFFER_SIZE);
+		if (read_bytes == 0)
+			break ;
+		if (read_bytes == -1)
+		{
+			free(buf);
+			return (NULL);
+		}
+		buf[read_bytes] = '\0';
+		tmp = ft_strjoin(tmp, buf);
+	}
+	free(buf);
+	return (tmp);
+}
+
 char	*get_next_line(int fd)
 {
-	static char	*lefted_input[2028];
+	static char	*tmp[2048];
 	char		*line;
 
-	if (fd < 0 || BUFFER_SIZE < 1)
+	if (fd < 0 || BUFFER_SIZE < 1 || read(fd, &line, 0) < 0)
 		return (NULL);
-	lefted_input[fd] = get_input(fd, lefted_input[fd]);
-	if (!lefted_input[fd])
+	tmp[fd] = get_tmp(fd, tmp[fd]);
+	if (!tmp[fd])
 		return (NULL);
-	line = cut_line(lefted_input[fd]);
-	lefted_input[fd] = clean_lefted_input(lefted_input[fd]);
+	line = get_line(tmp[fd]);
+	tmp[fd] = clean_tmp(tmp[fd]);
 	return (line);
 }

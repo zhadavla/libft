@@ -3,29 +3,31 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_bonus.h                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vzhadan <vzhadan@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mnurlybe <mnurlybe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/28 16:55:36 by vzhadan           #+#    #+#             */
-/*   Updated: 2023/02/07 14:08:51 by vzhadan          ###   ########.fr       */
+/*   Created: 2023/01/31 17:17:16 by mnurlybe          #+#    #+#             */
+/*   Updated: 2023/01/31 17:18:04 by mnurlybe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef GET_NEXT_LINE_BONUS_H
 # define GET_NEXT_LINE_BONUS_H
 
-# include <stdlib.h>
-# include <unistd.h>
-
 # ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 1
+#  define BUFFER_SIZE 7
 # endif
 
-char	*ft_strjoin(char *s1, char *s2);
+# include <unistd.h>
+# include <stdlib.h>
+
+char	*get_next_line(int fd);
+char	*get_tmp(int fd, char *tmp);
+char	*get_line(char *tmp);
+char	*clean_tmp(char *tmp);
+void	ft_bzero(void *s, size_t n);
 void	*ft_calloc(size_t nmemb, size_t size);
 size_t	ft_strlen(const char *s);
-char	*ft_strchr(const char *s, int c);
-char	*cut_unfin_line(char *uf_line);
-char	*get_lefted_str(char *uf_line, char *lefted);
-char	*get_next_line(int fd);
+int		ft_strchr(char *s, char c);
+char	*ft_strjoin(char *tmp, char *buf);
 
 #endif
