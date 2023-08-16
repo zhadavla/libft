@@ -6,11 +6,11 @@
 /*   By: vzhadan <vzhadan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/27 17:34:32 by vzhadan           #+#    #+#             */
-/*   Updated: 2023/01/31 17:05:40 by vzhadan          ###   ########.fr       */
+/*   Updated: 2023/08/16 19:16:28 by vzhadan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../../includes/libft.h"
 
 /*
  *	Function get_num_of_digits returns number of digits in the number

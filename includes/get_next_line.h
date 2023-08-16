@@ -6,7 +6,7 @@
 /*   By: vzhadan <vzhadan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/31 17:00:27 by mnurlybe          #+#    #+#             */
-/*   Updated: 2023/08/11 15:52:44 by vzhadan          ###   ########.fr       */
+/*   Updated: 2023/08/16 19:17:44 by vzhadan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 
 # include <unistd.h>
 # include <stdlib.h>
-# include "../libft/libft.h"
+# include "libft.h"
 
 char	*get_next_line(int fd);
 char	*get_tmp(int fd, char *tmp);

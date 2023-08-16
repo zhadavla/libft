@@ -6,14 +6,14 @@
 /*   By: vzhadan <vzhadan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 16:20:44 by vzhadan           #+#    #+#             */
-/*   Updated: 2023/08/11 15:49:40 by vzhadan          ###   ########.fr       */
+/*   Updated: 2023/08/16 19:17:24 by vzhadan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
-# include "../ft_printf/ft_printf.h"
-# include "../get_next_line/get_next_line.h"
+# include "ft_printf.h"
+# include "get_next_line.h"
 # include <stdlib.h>
 # include <unistd.h>
 

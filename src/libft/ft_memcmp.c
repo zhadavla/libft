@@ -6,11 +6,11 @@
 /*   By: vzhadan <vzhadan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 20:29:44 by vzhadan           #+#    #+#             */
-/*   Updated: 2023/01/28 14:04:12 by vzhadan          ###   ########.fr       */
+/*   Updated: 2023/08/16 19:16:28 by vzhadan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../../includes/libft.h"
 
 /*
  *	Compares the first n bytes of memory area {s1} and memory area {s2}.

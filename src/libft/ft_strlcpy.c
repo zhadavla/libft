@@ -6,11 +6,11 @@
 /*   By: vzhadan <vzhadan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 16:03:47 by vzhadan           #+#    #+#             */
-/*   Updated: 2023/01/28 15:07:45 by vzhadan          ###   ########.fr       */
+/*   Updated: 2023/08/16 19:16:28 by vzhadan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../../includes/libft.h"
 
 /*
  *	The contents of string {src} are copied into buffer {dst}.

@@ -6,11 +6,11 @@
 /*   By: vzhadan <vzhadan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 21:09:19 by vzhadan           #+#    #+#             */
-/*   Updated: 2023/01/28 13:31:45 by vzhadan          ###   ########.fr       */
+/*   Updated: 2023/08/16 19:16:28 by vzhadan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../../includes/libft.h"
 
 /*
  *	Makes integer from string, skiping all the whitespaces

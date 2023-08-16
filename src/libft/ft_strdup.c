@@ -6,11 +6,11 @@
 /*   By: vzhadan <vzhadan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 18:15:52 by vzhadan           #+#    #+#             */
-/*   Updated: 2023/01/28 15:06:40 by vzhadan          ###   ########.fr       */
+/*   Updated: 2023/08/16 19:16:28 by vzhadan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../../includes/libft.h"
 
 /*
  *	This function returns a pointer to a null-terminated byte string,
