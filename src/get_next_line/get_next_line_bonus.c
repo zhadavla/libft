@@ -6,11 +6,11 @@
 /*   By: vzhadan <vzhadan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/31 17:14:59 by mnurlybe          #+#    #+#             */
-/*   Updated: 2023/08/11 15:51:43 by vzhadan          ###   ########.fr       */
+/*   Updated: 2023/08/16 19:28:29 by vzhadan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line_bonus.h"
+#include "../../includes/get_next_line_bonus.h"
 
 char	*clean_tmp(char *tmp)
 {
